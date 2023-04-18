@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Flask Registration {% endblock %}
+{% block contents %}
+<div class="form-body" class="container-fluid">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3>Get more things done with Loggin platform.</h3>
+          <br>
+          <p>This website is created with <strong style="color:orange">Flask</strong>.</p>
+          <strong id="status" style="color:orange"></strong>
+          <br>
+          <div class="page-links">
+            <a href="{{url_for('user.login')}}">Login</a><a href="{{url_for('user.register')}}" class="active">Register</a>
+          </div>
+          <form id="registerForm">
+            <input class="form-control" type="text" id="username" placeholder="Username" required>
+            <input class="form-control" type="email" id="email" placeholder="E-mail Address" required>
+            <input class="form-control" type="password" id="password" placeholder="Password" required>
+            <div class="form-button">
+              <button id="register" type="submit" class="ibtn">Register</button>
+            </div>
+          </form>
+          <div class="other-links">
+            <span>Or register with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

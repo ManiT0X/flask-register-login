@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Profile {% endblock %}
+{% block contents %}
+<div class="form-body container-fluid">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items-profile ">
+          <h3>WELCOME <strong style="color:orange">{{current_user.username }}</strong></h3>
+          <br>
+          <p class="text-left">You are viewing this page because you're logged in</p>
+          <p class="text-left">Here is your information from the database</p>
+            <input class="form-control" value="{{current_user.username}}" readonly>
+            <input class="form-control" value="{{current_user.email}}" readonly>
+          <p class="text-left">your password is encoded using<br><br> <strong style="color:orange">PBKDF2-HMAC-SHA256</strong> message digest algorithm</p>
+            <input class="form-control" value="{{current_user.password}}" readonly>
+          <br>
+            <div class="form-button">
+              <a type="button" class="ibtn" href="{{url_for('user.logout')}}" target="_self">Logout</a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
