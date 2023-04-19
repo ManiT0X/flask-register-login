@@ -11,7 +11,9 @@ To run this project, you will need the following installed on your system:
 
 - Python 3  
 - Flask  
-- SQLAlchemy  
+- Flask_sqlalchemy  
+- Flask_login  
+- Flask_wtf
 
 ## Database Schema  
 The database used in this project has two tables:  
